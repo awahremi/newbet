@@ -261,11 +261,12 @@ h3{
 }
 
 #bg-video{
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   width: 100vw;
   height: 99vh;
   z-index: -3;
   object-fit:contain;
+  padding-bottom: 300px;
 }
