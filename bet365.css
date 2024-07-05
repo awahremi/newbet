@@ -267,5 +267,5 @@ h3{
   width: 100vw;
   height: 110vh;
   z-index: -3;
-  object-fit:contain;
+  object-fit:fill;
 }
