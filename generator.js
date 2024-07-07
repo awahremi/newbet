@@ -164,11 +164,11 @@ function GenerateWhatsappText(){
   `Hello guys, our ticket for tomorow involves:
 
   ${split1.join(" ")}, odds ${newEventOneOdd.value} 
-  Time ${time1}.
+  Time ${time1} UTC.
   Final result ${result1},
 
   ${split2.join(" ")}, odds ${newEventTwoOdd.value} 
-  Time ${time2}.
+  Time ${time2} UTC.
   Final result ${result2}.
 
   Total odds ${(newEventOneOdd.value * newEventTwoOdd.value).toFixed(2)}, 
