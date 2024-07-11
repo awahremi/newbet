@@ -215,6 +215,8 @@ function darkTheme(variable){
     let home = document.getElementById('Account-balance')
     home.innerHTML = ` $${balance}`
     footerBallance.innerHTML = ` $${balance}`
+    footerBallance2.innerHTML =  ` $${balance}`
+
 
    }
  
