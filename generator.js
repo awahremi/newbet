@@ -23,6 +23,7 @@ let newTeamTwoScore = document.getElementById('event-two-score-gen')
 
 let balance = document.getElementById('Account-balance');
 let footerBallance = document.getElementById('footer-ballance');
+let footerBallance2 = document.getElementById('footer-ballance2');
 
 let balanceValue = parseFloat(balance.innerText)
 let settledEventName1s = document.getElementById('settled1')
@@ -191,6 +192,12 @@ function addBackgroundColor(variable){
   variable.classList.toggle("green-background")
 }
 
+let whiteFooter = document.querySelector('.white-theme')
+let whiteFooter2 = document.querySelector('.white-theme2')
+
+function darkTheme(variable){
+  variable.classList.toggle("dark-theme")
+}
    
 
    function setHomeBallance(){
@@ -199,6 +206,7 @@ function addBackgroundColor(variable){
     let home = document.getElementById('Account-balance')
     home.innerHTML = ` $${balance}`
     footerBallance.innerHTML = ` $${balance}`
+    footerBallance2.innerHTML =  ` $${balance}`
    }
 
    function settledBallance(){

@@ -265,7 +265,12 @@ h3{
   top: 0;
   left: 0;
   width: 100vw;
-  height: 105vh;
+  height: 103vh;
   z-index: -3;
   object-fit:fill;
+}
+.dark-theme{
+  z-index:-2 ;
+  display: none;
+
 }
