@@ -230,6 +230,7 @@ pre::after{
   height: 25px;
   width: 26px;
   margin-bottom: -2px;
+  opacity: 0.85;
 }
 .menu p{
 margin-top: 1px;
