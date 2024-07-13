@@ -148,7 +148,7 @@ padding: 1px 2px;
 }
 .event-one-date-time, .event-two-date-time{
   white-space: pre;
-  text-transform: capitalize;
+  
   color: var(--color-grey8);
   line-height: 20px;
   word-wrap: normal;

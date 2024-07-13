@@ -72,7 +72,7 @@ localStorage.setItem('balance', JSON.stringify(acountBalance) )
 
 function changeContent(){
   for (const teamTwoDateTime of teamTwoDateTimes) {
-    let variable= `${newEventTwoName.value} `
+    let variable= `${newEventTwoName.value}`
   
     const regex = / v /gi
     const words = variable.split(" ")
@@ -81,9 +81,30 @@ function changeContent(){
     let newNumber = capitaliseWords.replace(regex, ' v ')
     newNumber = `${newNumber}  `
   
-    teamTwoDateTime.innerHTML =`${newNumber}  ${newEventTwoDateTimes.value}`
+    teamTwoDateTime.innerHTML =`${newNumber}${newEventTwoDateTimes.value}`
   
   }
+  for (const teamOneDateTime of teamOneDateTimes) {
+
+    let variable = `${newEventOneName.value}`
+    let variable2 = `${newEventOneDateTimes.value}`
+  
+  
+  
+    const regex = / v /gi
+    const words = variable.split(" ")
+    const words2 = variable2.split(" ")
+    let capitaliseWords = words.map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1))
+    let capitaliseWords2 = words2.map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1))
+    capitaliseWords = capitaliseWords.join(" ")
+    capitaliseWords2 = capitaliseWords2.join(" ")
+    let newNumber = capitaliseWords.replace(regex, ' v ')
+    newNumber = `${newNumber}  `
+  
+    teamOneDateTime.innerHTML = `${newNumber}${capitaliseWords2}`
+  
+  }
+  
   
 for (const ret of returns) {
   let calcReturns = parseFloat(newEventOneOdd.value * newEventTwoOdd.value * newStake.value)
@@ -101,23 +122,6 @@ for (const stake of stakes) {
 for (const teamOneScore of teamOneScores) {
   teamOneScore.textContent = newTeamOneScore.value;  
   teamOneScore.innerHTML =   newTeamOneScore.value;
-
-}
-for (const teamOneDateTime of teamOneDateTimes) {
-
-  let variable = `${newEventOneName.value} `
-
-
-
-  const regex = / v /gi
-  const words = variable.split(" ")
-  let capitaliseWords = words.map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1))
-  capitaliseWords = capitaliseWords.join(" ")
-  let newNumber = capitaliseWords.replace(regex, ' v ')
-  newEventOneDateTimes.value = `  ${newEventOneDateTimes.value}`
-  console.log(newNumber + newEventOneDateTimes.value)
-
-  teamOneDateTime.innerHTML = `${newNumber}${newEventOneDateTimes.value}`
 
 }
 
