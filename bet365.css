@@ -126,7 +126,6 @@ padding: 1px 2px;
   
 .left-area, .left-area span{
   display: flex;
-  white-space: normal;
    
 }
 .bet-details{
@@ -148,10 +147,12 @@ padding: 1px 2px;
   text-align: end;
 }
 .event-one-date-time, .event-two-date-time{
-  white-space: pre-wrap;
+  white-space: pre;
+  text-transform: capitalize;
   color: var(--color-grey8);
   line-height: 20px;
   word-wrap: normal;
+  
 }
 
 #live-now input{
@@ -182,7 +183,7 @@ padding: 1px 2px;
   margin: -15px auto 45px;
   justify-content: center;
   font-size: 14px;
-  font-weight: 800;
+  font-weight: 700;
   color: white;
   background-color: #4f4f4f;
   border: 0;
@@ -194,10 +195,6 @@ padding: 1px 2px;
   padding-left: 5px;
   color: #26ffbb;
 
-}
-pre::after{
-  content: attr(value) counter(digit, decimal) ". " counter(digit, decimal) ". " counter(digit, decimal) ", ";
-  counter-reset: digit decimal;
 }
 
 
@@ -230,7 +227,7 @@ pre::after{
   height: 25px;
   width: 26px;
   margin-bottom: -2px;
-  opacity: 0.85;
+  opacity: 0.8 5;
 }
 .menu p{
 margin-top: 1px;

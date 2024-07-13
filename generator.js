@@ -78,9 +78,10 @@ function changeContent(){
     const words = variable.split(" ")
     let capitaliseWords = words.map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1))
     capitaliseWords = capitaliseWords.join(" ")
-    const newNumber = capitaliseWords.replace(regex, ' v ')
+    let newNumber = capitaliseWords.replace(regex, ' v ')
+    newNumber = `${newNumber}  `
   
-    teamTwoDateTime.innerHTML =`${newNumber + "   " }  ${newEventTwoDateTimes.value}`
+    teamTwoDateTime.innerHTML =`${newNumber}  ${newEventTwoDateTimes.value}`
   
   }
   
@@ -104,7 +105,7 @@ for (const teamOneScore of teamOneScores) {
 }
 for (const teamOneDateTime of teamOneDateTimes) {
 
-  let variable = `${newEventOneName.value}  ${newEventOneDateTimes.value}`
+  let variable = `${newEventOneName.value} `
 
 
 
@@ -112,9 +113,11 @@ for (const teamOneDateTime of teamOneDateTimes) {
   const words = variable.split(" ")
   let capitaliseWords = words.map(word => word.charAt(0).toLocaleUpperCase() + word.slice(1))
   capitaliseWords = capitaliseWords.join(" ")
-  const newNumber = capitaliseWords.replace(regex, ' v ')
+  let newNumber = capitaliseWords.replace(regex, ' v ')
+  newEventOneDateTimes.value = `  ${newEventOneDateTimes.value}`
+  console.log(newNumber + newEventOneDateTimes.value)
 
-  teamOneDateTime.innerHTML = newNumber
+  teamOneDateTime.innerHTML = `${newNumber}${newEventOneDateTimes.value}`
 
 }
 
