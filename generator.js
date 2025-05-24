@@ -252,6 +252,19 @@ function darkTheme(variable){
     localStorage.setItem('balance', JSON.stringify(acountBalance) )
 
    }
+   function widthdrawAll(){
+   let acountBalance =    JSON.parse(localStorage.getItem('balance'))
+
+      acountBalance = 500
+
+      let home = document.getElementById('Account-balance')
+    let newBalance = parseFloat(acountBalance.toFixed(2)).toLocaleString('en-US')
+    home.innerHTML = ` $${newBalance}`
+
+
+    localStorage.setItem('balance', JSON.stringify(acountBalance) )
+
+   }
 
    /*function settledEventName(){
     let variable= newEventOneName.value

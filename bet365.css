@@ -201,7 +201,7 @@ padding: 1px 2px;
 
 .footer{
   position: fixed;
-  bottom: 0;
+  bottom: 93px;
   left: 0;
   right: 0;
   display: flex;
@@ -261,13 +261,11 @@ h3{
 }
 
 #bg-video{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 103vh;
   z-index: -3;
-  object-fit:fill;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  height: 100%;
 }
 .dark-theme{
   z-index:-2 ;

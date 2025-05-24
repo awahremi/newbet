@@ -6,23 +6,23 @@
   <title>Home</title>
   <link rel="stylesheet" href="bet365.css">
 </head>
-<body>
-  <div class="nav-container" >
-    
-    <div class="nav" style="z-index: -4;;">
-      <img src="offers icon.jpg" alt="offers" style="height: 45px; margin: 0; padding: 0;">
-      <img src="bet logo 2.jpg" alt="logo" style="height: 40px; margin: 0; padding: 0;">
-      <div class="deposit" style="display: flex; flex-direction: column;
-      margin-right: 10px;">
-        <img src="user icon.jpg" alt="user">
-        <p style="margin-top: -2px; margin-bottom: 6px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="Account-balance" >59.48</p>
-      </div>
-    </div>
-    </div>
-    <a href="index.html#settled"><video id="bg-video" autoplay loop muted>
-      <source src="bg3.mp4" type="video/mp4">
-    </video></a></a>
+<body style="width: 100vw;" onload="startTime()">
 
+  <div class="whole-statusbar" style="position: relative; z-index: -3; ">
+    <img src="new stautusbar.jpg" alt="" style="width: 100vw; padding-bottom: 15px; background-color: #117956;">
+
+    <p style="margin-top: -23px; width: 50px;margin-right:9px; text-align: center;font-weight: 600; font-size: 11px; float: right; position: relative; z-index: 1; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="Account-balance" >59.48</p>
+    
+    <p style="margin-top: -99px; width: 50px;margin-left:9px; padding-right: 190px; text-align: center;font-weight: 600; font-size: 13px; position: relative; z-index: 1; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="time" >59.48</p>
+  </div>
+  
+  
+  
+  <a href="index.html#settled" style="z-index: -5; padding: 0; margin-top: -117px;"><video id="bg-video" autoplay loop muted>
+      <source src="bg3.mp4" type="video/mp4">
+    </video></a>
+
+    
 
   <div class="footer" >
     <div class="menu" >
@@ -34,6 +34,7 @@
       <img src="my bets dark green.jpg" alt="my bets" class="my-bets" onclick="setHomeBallance()">
       
   </div>
+  
 
   <div class="footer white-theme2" style="background-color: #DDDDDD; ">
     <div class="menu" >
@@ -46,5 +47,23 @@
       
   </div>
   <script src="generator.js"></script>
+  <script >
+    function startTime(){
+      const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  let s = today.getSeconds();
+  m = checkTime(m);
+  s = checkTime(s);
+  document.getElementById('time').innerHTML =  h + ":" + m ;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+    
 </body>
 </html>
