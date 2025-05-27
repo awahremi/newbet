@@ -7,10 +7,11 @@
   <link rel="stylesheet" href="bet365.css">
 </head>
 <body onload="launchHomePage()">
-  <div class="whole-statusbar" style="">
+  <div class="whole-statusbar" >
     <img src="bets stausbar.jpg" alt="" style="width: 100vw; position:fixed ; left:0;top: 0px;">
 
     <p style="margin-top:10px; width: 60px;margin-left:2px; padding-right: 180px;  text-align: center;font-weight: 400; font-size: 13px; position: fixed; z-index: 1; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;" id="time" >59.48</p>
+  </div>
   <div class="nav-container" >
     
     <div class="nav" style="display: none;">
@@ -26,14 +27,13 @@
 
     <div class="bets-menu"  >
       
-      <a href="#Cash-Out"  class="active-bet cash-out " onclick="addBackgroundColor(cashOut)"  ><span onclick="setHomeBallance()">Cash Out</span></a>
+      <a href="#Cash-Out"  class="active-bet cash-out " onclick="addBackgroundColor(cashOut)"  unselectable="on"><span onclick="setHomeBallance()">Cash Out</span></a>
       <a href="#live-now"><span class="active-bet">Live Now</span></a>
       <a href="#unsettled" class="active-bet unsettled" onclick="addBackgroundColor(unsettled)"><span onclick="setHomeBallance()">Unsettled</span></a>
       <a href="#settled" class="active-bet settled green-background" onclick="addBackgroundColor(settled)" ><span onclick="settledBallance()">Settled</span></a>
       <a href="home.html"><span class="active-bet">All</span></a>
     </div>
   </div>
-  
   <div id="Cash-Out">
 
     <br>
@@ -271,12 +271,12 @@
   
   <br>
   
-  <a href="#empty" style="text-align: center;display: block;"><p class="older-bets" style="text-align: center; color: rgb(180, 178, 178); font-weight: 700; margin-bottom: 400px;">View older settled bets in your Account History</p></a>
+  <a href="#" style="text-align: center;display: block;"><p class="older-bets" style="text-align: center; color: rgb(180, 178, 178); font-weight: 700; margin-bottom: 400px;">View older settled bets in your Account History</p></a>
  
 
   </section>
   <div class="emptySettled">
-    <p id="empty"  style="text-align: center; color: rgb(180, 178, 178);font-size: 12px; font-weight: 700; padding-top: 10px;">There are currently no bets to display</p>
+    <p id="empty1"  style="text-align: center; color: rgb(180, 178, 178);font-size: 12px; font-weight: 700; padding-top: 10px;">There are currently no bets to display</p>
 
   <p style="text-align: center; color: rgb(180, 178, 178);font-weight: 500;font-size: 10px; margin-bottom:-8px;">Bets appear here for 24 hours</p> 
   <p style="text-align: center; color: rgb(180, 178, 178); font-weight: 500;font-size: 10px; ">Older bets can be viewed in your Account History</p>
