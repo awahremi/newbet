@@ -103,8 +103,8 @@ function changeContent(){
     const event2Name = event2.value.slice(5,-3)
     const event2Score = event2.value.slice(-3)
   
-  newEventOneDateTimes =   `${fullDate} ${event1Time}`
-  newEventTwoDateTimes =   `${fullDate} ${event2Time}`
+  newEventOneDateTimes = document.getElementById('givenTime').value ||  `${fullDate} ${event1Time}`
+  newEventTwoDateTimes = document.getElementById('givenTime').value ||  `${fullDate} ${event2Time}`
   let newTeamTwoScore =  `${event2.value.slice(5, index2)} ${event2Score.replace(regex1, '-')}`
   
   
@@ -128,7 +128,7 @@ function changeContent(){
   }
   
   for (const teamOneDateTime of teamOneDateTimes) {
-    teamOneDateTime.innerHTML = `${event1Name.replace(regex2, " v ")} ${fullDate} ${event1Time}`
+    teamOneDateTime.innerHTML = `${event1Name.replace(regex2, " v ")} ${newEventOneDateTimes} ${event1Time}`
   }
    
     for (const teamTwoScore of teamTwoScores) {
@@ -136,7 +136,7 @@ function changeContent(){
   }
   
   for (const teamTwoDateTime of teamTwoDateTimes) {
-    teamTwoDateTime.innerHTML = `${event2Name.replace(regex2, " v ")} ${fullDate} ${event2Time}`
+    teamTwoDateTime.innerHTML = `${event2Name.replace(regex2, " v ")} ${newEventTwoDateTimes} ${event2Time}`
   }
    
   
@@ -265,6 +265,27 @@ function darkTheme(variable){
     localStorage.setItem('balance', JSON.stringify(acountBalance) )
 
    }
+
+   function startTime(){
+    const today = new Date();
+let h = today.getHours();
+let m = today.getMinutes();
+let s = today.getSeconds();
+m = checkTime(m);
+s = checkTime(s);
+document.getElementById('time').innerHTML =  h + ":" + m ;
+setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+return i;
+}
+function launchHomePage(){
+  startTime()
+  setHomeBallance()
+}
+setHomeBallance();
 
    /*function settledEventName(){
     let variable= newEventOneName.value

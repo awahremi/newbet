@@ -272,3 +272,13 @@ h3{
   display: none;
 
 }
+.emptySettled, .emptyUnsettled{
+background:  linear-gradient(to bottom right,#303d39,#353535);
+border-radius:7px 7px;
+margin:5px 12px;
+margin-bottom: 400px;
+margin-top: -200px;
+padding-top:10px;
+padding-bottom:35px;
+
+}
