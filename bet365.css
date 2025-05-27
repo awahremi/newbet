@@ -44,6 +44,7 @@ min-width: 40px;
     display: inline-flex;
     outline:none;
     box-shadow: none;
+    transition: 0.2s ease-in-out;
 
 }
 

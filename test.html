@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="bet365.css">
+
+</head>
+<body>
+  <div class="bets-menu"  >
+      
+      <a href="#Cash-Out"  class="active-bet cash-out " onclick="addBackgroundColor(cashOut)"  unselectable="on"><span onclick="setHomeBallance()">Cash Out</span></a>
+      <a href="#live-now"><span class="active-bet">Live Now</span></a>
+      <a href="#unsettled" class="active-bet unsettled" onclick="addBackgroundColor(unsettled)"><span onclick="setHomeBallance()">Unsettled</span></a>
+      <a href="#settled" class="active-bet settled green-background" onclick="addBackgroundColor(settled)" ><span onclick="settledBallance()">Settled</span></a>
+      <a href="home.html"><span class="active-bet">All</span></a>
+    </div>
+  <div id="Cash-Out"></div>
+
+    <script src="generator.js"></script>
+  
+</body>
+</html>
