@@ -102,9 +102,12 @@ function changeContent(){
     const event2Time = event2.value.slice(0,5)
     const event2Name = event2.value.slice(5,-3)
     const event2Score = event2.value.slice(-3)
-  
-  newEventOneDateTimes = document.getElementById('givenTime').value ||  `${fullDate} ${event1Time}`
-  newEventTwoDateTimes = document.getElementById('givenTime').value ||  `${fullDate} ${event2Time}`
+
+  function CapitaliseTime(time){
+    return time.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' '); 
+  }
+  newEventOneDateTimes = CapitaliseTime(document.getElementById('givenTime').value) ||  `${fullDate} ${event1Time}`
+  newEventTwoDateTimes = CapitaliseTime(document.getElementById('givenTime').value) ||  `${fullDate} ${event1Time}`
   let newTeamTwoScore =  `${event2.value.slice(5, index2)} ${event2Score.replace(regex1, '-')}`
   
   
