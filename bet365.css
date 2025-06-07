@@ -233,6 +233,10 @@ padding: 1px 2px;
   margin-bottom: -2px;
   opacity: 0.8 5;
 }
+.menu a{
+  justify-content: center;
+  align-items: center;
+}
 .menu p{
 margin-top: 1px;
 align-items: center;
