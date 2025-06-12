@@ -27,10 +27,10 @@
 
     <div class="bets-menu"  >
       
-      <a href="#empty1"  class="active-bet cash-out green-background" onclick="addBackgroundColor(cashOut)"  unselectable="on"><span onclick="settledBallance()">Cash Out</span></a>
+      <a href="#empty1"  class="active-bet cash-out " onclick="addBackgroundColor(cashOut)"  unselectable="on"><span onclick="settledBallance()">Cash Out</span></a>
       <a href="#live-now"><span class="active-bet">Live Now</span></a>
       <a href="#empty2" class="active-bet unsettled" onclick="addBackgroundColor(unsettled)"><span onclick="settledBallance()">Unsettled</span></a>
-      <a href="#settled" class="active-bet settled " onclick="addBackgroundColor(settled)" ><span onclick="settledBallance()">Settled</span></a>
+      <a href="#settled" class="active-bet settled green-background" onclick="addBackgroundColor(settled)" ><span onclick="settledBallance()">Settled</span></a>
       <a href="index.html"><span class="active-bet">All</span></a>
     </div>
   </div>
@@ -331,7 +331,7 @@
     
     </div>
     
-      <img src="my bets icon.jpg" alt="my bets" class="my-bets"  onclick="darkTheme(whiteFooter)">
+      <a href="index.html"><img src="my bets icon.jpg" alt="my bets" class="my-bets" style="width: 100%" onclick="setHomeBallance()"></a>
       
   </div>
 
