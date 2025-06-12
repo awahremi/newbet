@@ -196,6 +196,7 @@ for (const eventTwoOdd of eventTwoOdds) {
 let cashOut = document.querySelector('.cash-out')
 let settled = document.querySelector('.settled')
 let unsettled = document.querySelector('.unsettled')
+let settledd = document.querySelector('.all-bets')
 
 function addBackgroundColor(variable){
   const links = document.querySelectorAll('a')
