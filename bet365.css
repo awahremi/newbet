@@ -227,10 +227,10 @@ padding: 1px 2px;
 }
 .menu img{
   padding-top: 2px;
-  height: 25px;
+  height: 23px;
   width: 26px;
   margin-bottom: -2px;
-  opacity: 0.8 5;
+  opacity: 0.8 ;
 }
 .menu a{
   justify-content: center;
@@ -242,6 +242,8 @@ align-items: center;
 font-size: 11px;
 font-weight: 700;
 color: #aaa7a3e4;
+  opacity: 0.9 ;
+
 
 }
 .my-bets{
@@ -262,8 +264,8 @@ h3{
   color:  #9e9e9e;
   font-weight: 670;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  font-size: 10px;
-  margin-top: 5px;
+  font-size: 11px;
+  margin-top: 2.5px;
 }
 
 #bg-video{
