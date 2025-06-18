@@ -289,6 +289,10 @@ function launchHomePage(){
   startTime()
   setHomeBallance()
 }
+function launchHomeCopyPage(){
+  startTime()
+  settledBallance()
+}
 setHomeBallance();
 
    /*function settledEventName(){
