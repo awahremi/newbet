@@ -217,20 +217,42 @@ function darkTheme(variable){
     balance = parseFloat(balance.toFixed(2)).toLocaleString('en-US')
     let home = document.getElementById('Account-balance')
     home.innerHTML = ` $${balance}`
-    footerBallance.innerHTML = ` $${balance}`
-    footerBallance2.innerHTML =  ` $${balance}`
+
+    
+    if (balance.includes('.')){
+      footerBallance.innerHTML = ` $${balance}`
+      footerBallance2.innerHTML =  ` $${balance}`
+    home.innerHTML = ` $${balance}`
+
+    }else {
+      footerBallance.innerHTML = ` $${balance}.00`
+      footerBallance2.innerHTML =  ` $${balance}.00`
+    home.innerHTML = ` $${balance}.00`
+
+    }
    }
 
    function settledBallance(){
     let balance = JSON.parse(localStorage.getItem('balance'))
     balance = parseFloat(balance.toFixed(2)).toLocaleString('en-US')
     let home = document.getElementById('Account-balance')
-    home.innerHTML = ` $${balance}`
-    footerBallance.innerHTML = ` $${balance}`
-    footerBallance2.innerHTML =  ` $${balance}`
 
+    if (balance.includes('.')){
+      footerBallance.innerHTML = ` $${balance}`
+      footerBallance2.innerHTML =  ` $${balance}`
+      home.innerHTML = ` $${balance}`
 
-   }
+    }else {
+      footerBallance.innerHTML = ` $${balance}.00`
+      footerBallance2.innerHTML =  ` $${balance}.00`
+      home.innerHTML = ` $${balance}.00`
+
+    }
+
+    }
+    
+
+  
  
   
    
