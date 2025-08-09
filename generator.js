@@ -291,22 +291,24 @@ function darkTheme(variable){
     localStorage.setItem('balance', JSON.stringify(acountBalance) )
 
    }
+   function checkTime(i) {
+if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+return i;
+}
 
    function startTime(){
     const today = new Date();
 let h = today.getHours();
 let m = today.getMinutes();
 let s = today.getSeconds();
+h = checkTime(h);
 m = checkTime(m);
 s = checkTime(s);
 document.getElementById('time').innerHTML =  h + ":" + m ;
 setTimeout(startTime, 1000);
 }
 
-function checkTime(i) {
-if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
-return i;
-}
+
 function launchHomePage(){
   startTime()
   setHomeBallance()
