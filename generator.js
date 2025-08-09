@@ -172,7 +172,7 @@ for (const eventTwoOdd of eventTwoOdds) {
   document.getElementById('settled2').innerHTML = event2Name.replace(regex2, " v ")
 
   let text =
-  `Hello guys, our ticket for tomorow involves:
+  `Hello guys, our ticket for ${fullDate} involves:
 
   ${event1Name}, odds ${newEventOneOdd.value} 
   Time ${event1Time} UTC.
